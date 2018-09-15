@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundCaro"
+    android:orientation="vertical"
+    tools:context="com.ducdung.carogame.ui.activity.BoardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_board_height"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/image_button_back"
+            style="@style/button_board_screen"
+            android:src="@drawable/ic_back"/>
+
+        <ImageButton
+            android:id="@+id/image_button_undo"
+            style="@style/button_board_screen"
+            android:src="@drawable/ic_undo"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/image_button_exit"
+            style="@style/button_board_screen"
+            android:src="@drawable/ic_exit"
+            android:visibility="gone"/>
+
+        <ImageButton
+            android:id="@+id/image_button_share"
+            style="@style/button_board_screen"
+            android:src="@drawable/ic_share"/>
+
+        <ImageButton
+            android:id="@+id/image_button_search"
+            style="@style/button_board_screen"
+            android:src="@drawable/ic_search"/>
+
+        <ImageButton
+            android:id="@+id/image_button_visibility"
+            style="@style/button_board_screen"
+            android:src="@drawable/ic_visibility"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_scroll_board"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/relative_layout_player_item_height"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/layout_profile_player_left"
+            layout="@layout/layout_player_item"
+            android:layout_width="@dimen/layout_player_item_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginStart="@dimen/margin_small"/>
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/btn_play"/>
+
+        <TextView
+            android:id="@+id/text_view_player_turn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/your_turn"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_medium"
+            android:visibility="invisible"/>
+
+        <include
+            android:id="@+id/layout_profile_player_right"
+            layout="@layout/layout_player_item"
+            android:layout_width="@dimen/layout_player_item_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/layout_profile_player_left"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"/>
+    </RelativeLayout>
+</LinearLayout>

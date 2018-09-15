@@ -1,0 +1,28 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="app_image_height">180dp</dimen>
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_medium">10dp</dimen>
+    <dimen name="line_break_height">1dp</dimen>
+    <dimen name="device_list_title">22sp</dimen>
+    <dimen name="text_size_medium">18sp</dimen>
+    <dimen name="padding_high">20dp</dimen>
+    <dimen name="margin_high">20dp</dimen>
+    <dimen name="margin_small">5dp</dimen>
+    <dimen name="avatar_size">60dp</dimen>
+    <dimen name="image_player_size">35dp</dimen>
+    <dimen name="layout_player_item_width">110dp</dimen>
+    <dimen name="button_board_height">48dp</dimen>
+    <dimen name="button_board_width_land">48dp</dimen>
+    <dimen name="stroke_with">1dp</dimen>
+    <dimen name="corners_radius">10dp</dimen>
+    <dimen name="relative_layout_player_item_height">80dp</dimen>
+    <dimen name="relative_layout_player_item_width_land">125dp</dimen>
+    <dimen name="text_size_settings">30sp</dimen>
+    <dimen name="margin_medium">10dp</dimen>
+    <dimen name="item_checkbox_settings_text_size">18sp</dimen>
+    <dimen name="radio_group_settings_width">300dp</dimen>
+    <dimen name="text_history_index_width">30dp</dimen>
+</resources>

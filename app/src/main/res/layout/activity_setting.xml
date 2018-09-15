@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ducdung.carogame.ui.activity.SettingActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundCaro"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/padding_medium"
+            android:text="@string/text_settings"
+            android:textSize="@dimen/text_size_settings"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_medium">
+
+        <CheckBox
+            android:id="@+id/checkbox_two_head_win_block"
+            style="@style/item_checkbox_settings"
+            android:text="@string/two_head_win_block"/>
+
+        <include layout="@layout/line_break"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_sound"
+            style="@style/item_checkbox_settings"
+            android:text="@string/sound"/>
+
+        <include layout="@layout/line_break"/>
+
+        <TextView
+            style="@style/text_settings"
+            android:text="@string/level_game"
+            android:visibility="gone"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_level_game"
+            style="@style/radio_group_settings"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/radio_button_easy"
+                style="@style/radio_button_settings"
+                android:checked="true"
+                android:text="@string/game_easy"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_medium"
+                style="@style/radio_button_settings"
+                android:text="@string/game_medium"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_hard"
+                style="@style/radio_button_settings"
+                android:text="@string/game_hard"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/text_settings"
+            android:text="@string/text_choose_orientation"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_orientation"
+            style="@style/radio_group_settings"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_button_portrait"
+                style="@style/radio_button_settings"
+                android:text="@string/text_orientation_portrait"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_landscape"
+                style="@style/radio_button_settings"
+                android:text="@string/text_orientation_landscape"/>
+        </RadioGroup>
+
+        <include layout="@layout/line_break"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="com.ducdung.carogame.ui.activity.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_image_height"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:src="@drawable/app_image"/>
+
+    <Button
+        android:id="@+id/button_single_player"
+        style="@style/button_main_screen"
+        android:text="@string/single_player"/>
+
+    <Button
+        android:id="@+id/button_multiplayer"
+        style="@style/button_main_screen"
+        android:text="@string/multiplayer"/>
+
+    <Button
+        android:id="@+id/button_history"
+        style="@style/button_main_screen"
+        android:text="@string/history"/>
+
+    <Button
+        android:id="@+id/button_settings"
+        style="@style/button_main_screen"
+        android:text="@string/text_button_settings"/>
+
+    <Button
+        android:id="@+id/button_about"
+        style="@style/button_main_screen"
+        android:text="@string/about"/>
+
+    <Button
+        android:id="@+id/button_exit"
+        style="@style/button_main_screen"
+        android:text="@string/exit"/>
+</LinearLayout>

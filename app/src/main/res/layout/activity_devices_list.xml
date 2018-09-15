@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.ducdung.carogame.ui.activity.DevicesListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/padding_small"
+            android:text="@string/select_device_to_connect"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/device_list_title"/>
+
+        <include layout="@layout/line_break"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium"
+            android:paddingTop="@dimen/padding_small">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/your_device_name"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/text_view_your_device_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_small"
+            android:paddingLeft="@dimen/padding_medium"
+            android:paddingRight="@dimen/padding_medium">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/your_device_address"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/text_view_your_device_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+        <include layout="@layout/line_break"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/devices_list_type_title"
+                android:text="@string/paired_devices"/>
+
+            <TextView
+                android:id="@+id/text_view_no_paired_devices"
+                style="@style/no_devices"
+                android:text="@string/no_paired_devices"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_paired_devices"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line_break"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/devices_list_type_title"
+                android:text="@string/available_device"/>
+
+            <TextView
+                android:id="@+id/text_view_no_available_devices"
+                style="@style/no_devices"
+                android:text="@string/no_available_devices"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ProgressBar
+                    android:id="@+id/progress_bar_loading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler_view_available_devices"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/line_break"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_scan_available_devices"
+            style="@style/button_list_bluetooth_devices"
+            android:text="@string/scan_available_devices"/>
+
+        <Button
+            android:id="@+id/button_show_visibility"
+            style="@style/button_list_bluetooth_devices"
+            android:text="@string/show_visibility"/>
+    </LinearLayout>
+</LinearLayout>
